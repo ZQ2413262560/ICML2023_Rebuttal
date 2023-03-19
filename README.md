@@ -8,16 +8,16 @@ Here is an introduction to the experiments we conducted on SafetyGym:
 Firstly, as there is no open-source offline dataset available on SafetyGym, we created our own offline safety dataset based on the PointGoal environment. To construct this dataset, we trained the PPO-lag algorithm with different constraint thresholds and generated trajectories using the trained models. Specifically, we used constraint thresholds of 25, 40, and 80 with the PPO-lag algorithm, and the final cost and reward performance of these models are shown in the following figure.
 
 
-<img src="../Desktop/figure/f1_a.png" style="zoom:35.5%">  <img src="../Desktop/figure/f1_b.png" style="zoom:36%">
+<img src="figure/f1_a.png" style="zoom:35.5%">  <img src="figure/f1_b.png" style="zoom:36%">
 
 
 We then saved these three models and generated 333/334 trajectories for each model, resulting in a total of 1000 offline trajectory data that composed our PointGoal dataset. The distribution of this dataset is shown in figure below, which demonstrates that our dataset still has a certain degree of distinguishability.
 
-<img src="../Desktop/figure/f2.png" style="zoom:45%">
+<img src="figure/f2.png" style="zoom:45%">
 
 After generating the dataset, we tested our model and used a DT model as a baseline, setting the constraint threshold to d=30. The experimental results, shown in Figure below, demonstrate that our model can still meet the constraint requirements in the SafetyGym environment. This experiment showcases the potential of our model for safety-critical applications on SafetyGym.
 
-<img src="../Desktop/figure/f3_a.png" style="zoom:40%">   <img src="../Desktop/figure/f3_b.png" style="zoom:40%">
+<img src="figure/f3_a.png" style="zoom:40%">   <img src="figure/f3_b.png" style="zoom:40%">
 
 ## 2.experiments comparation with CoptiDICE
 
@@ -87,8 +87,8 @@ First, let me describe the two figures below. In these two figures, the blue lin
 
 (2) We expect the blue line to be slightly lower than the yellow line, but not too low. If the blue line is lower than the yellow line, it indicates that the trajectory meets the safety constraint condition, as stated in (1); however, we do not want the blue line to be too low. This is because our research assumes that there is a weak linear correlation between the agent's rewards and constraints, and a very low blue line can lead to worse reward effects.
 
-<img src="../Desktop/figure/critic_1.jpg" style="zoom:45%">
-<img src="../Desktop/figure/critic_2.jpg" style="zoom:45%">
+<img src="figure/critic_1.jpg" style="zoom:45%">
+<img src="figure/critic_2.jpg" style="zoom:45%">
 
 
 With the above assumptions in mind, we can analyze the images as follows:
