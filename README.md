@@ -61,6 +61,7 @@ Here, we compared our method with CoptiDICE. Specifically, we conducted experime
 In particular, we need to note that Halfcheetah_medium_expert is a more challenging dataset and learning the expert policy on this dataset is a relatively difficult task. On this task, Saformer demonstrated outstanding performance, while CoptiDICE failed. We believe that the reason for Saformer's poor performance on the Halfcheetah_medium task is that the distribution of $\hat C$ and $\hat R$ in this dataset is too narrow (see Appendix A of the paper), which prevented our model from achieving the best performance.
 
 
+**Note：We currently support the following algorithms: [Saformer, BCQ-L, CPQ, DT, CoptiDICE, CRR]. If you are interested, we can also conduct additional supplementary experiments.**
 
 ## 1.3 Hyperparameter Analysis 
 
